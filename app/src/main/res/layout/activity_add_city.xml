@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".activities.AddCityActivity">
+
+    <ImageView
+        android:id="@+id/imageViewPreview"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/icon" />
+
+    <EditText
+        android:id="@+id/editTextName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageViewPreview"
+        android:layout_marginTop="5dp"
+        android:hint="Name" />
+
+    <LinearLayout
+        android:id="@+id/layoutLink"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextName"
+        android:weightSum="1">
+
+        <EditText
+            android:id="@+id/editTextLink"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.70"
+            android:hint="URL"
+            android:inputType="textWebEditText" />
+
+        <Button
+            android:id="@+id/btnPreview"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_weight="0.3"
+            android:text="Preview" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/editTextDescription"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_below="@+id/layoutLink"
+        android:layout_marginTop="5dp"
+        android:gravity="top"
+        android:hint="Description"
+        android:maxLength="100"
+        android:maxLines="3" />
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextDescription"
+        android:layout_marginTop="10dp"
+        android:numStars="5"
+        android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>
